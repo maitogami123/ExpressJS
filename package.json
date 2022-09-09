@@ -1,0 +1,26 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "learning ExpressJs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Shikigami Maito",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maitogami123/learn-expressjs.git"
+  },
+  "keywords": [
+    "expressjs",
+    "learn"
+  ],
+  "bugs": {
+    "url": "https://github.com/maitogami123/learn-expressjs/issues"
+  },
+  "homepage": "https://github.com/maitogami123/learn-expressjs#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
