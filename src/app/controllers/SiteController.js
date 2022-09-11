@@ -1,16 +1,19 @@
 const Course = require('../models/Course');
+const { multipleMongooseToObject } = require('../../utilities/mongoose');
 
 class SiteController {
     // [GET] /
-    index(req, res) {
-        Course.find({}, (err, courses) => {
-            if (!err) res.json(courses);
-            else res.status(400).json({ error: 'You S U C C!' });
-        });
+    index(req, res, next) {
+        Course.find({})
+            .then((courses) => {
+                res.render('home', {
+                    courses: multipleMongooseToObject(courses),
+                });
+            })
+            .catch(next);
     }
 
     // [GET] /search
-    // ":slug" -> là một biến có thể nhận về nhiều giá trị khác nhau
     show(req, res) {
         res.render('search');
     }
